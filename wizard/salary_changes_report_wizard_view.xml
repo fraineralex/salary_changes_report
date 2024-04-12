@@ -1,0 +1,37 @@
+<odoo>
+    <record id="salary_changes_report_wizard_form" model="ir.ui.view">
+        <field name="name">salary.changes.report.wizard.form</field>
+        <field name="model">salary.changes.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group string="Datos generales" col="4">
+                    <field name="structure_ids" widget="many2many_tags" class="mt-4"/>
+                    <field name="company_id" />
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+                <footer>
+                    <button name="generate_report" type="object" string="Generar Reporte" class="oe_highlight"/>
+                    <button string="Cancelar" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_salary_changes_report_wizard" model="ir.actions.act_window">
+        <field name="name">Reporte de Cambios Salariales</field>
+        <field name="res_model">salary.changes.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="salary_changes_report.salary_changes_report_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="menuitem_salary_changes_report" model="ir.ui.menu">
+        <field name="name">Reporte de Cambios Salariales</field>
+        <field name="parent_id" ref="hr_payroll.menu_hr_payroll_report"/>
+        <field name="action" ref="salary_changes_report.action_salary_changes_report_wizard"/>
+    </record>
+
+    <!--  <menuitem action="salary_changes_report.action_salary_changes_report_wizard" id="salary_changes_report_menu" parent="hr_payroll.menu_hr_payroll_report"/> -->
+</odoo>
