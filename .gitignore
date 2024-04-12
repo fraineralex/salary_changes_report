@@ -1,0 +1,58 @@
+# Archivos y directorios generados por Odoo
+__pycache__/
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+htmlcov/
+.coverage
+.installed.cfg
+.DS_Store
+# Archivos y directorios generados por el entorno de desarrollo
+.env
+.env.*
+.idea/
+.vscode/
+*.sublime-workspace
+*.swp
+*.swo
+
+# Archivos de registros y datos temporales
+log/
+db_*.sqlite
+
+# Archivos de configuración local
+config.ini
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos de dependencias y entornos de desarrollo
+lib/
+bin/
+include/
+pip-selfcheck.json
+
+# Archivos de generación de documentación
+doc/_build/
+
+# Archivos de registro
+*.log
+
+# Archivos de copia de seguridad
+*.bak
+*.backup
+*.tmp
+
+# Archivos generados por pruebas unitarias
+.coverage.*
+htmlcov_*/
+
+# Otros archivos y directorios a ignorar
+node_modules/
+*.zip
+*.gz
+*.xlsx
